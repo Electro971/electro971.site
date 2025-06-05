@@ -183,8 +183,89 @@ function randomThought()
 	"Honour, Duty, and Obedience.",
 	"Hope is the beginning of unhappiness.",
 	"Hope is the first step on the road to disappointment.",
-	"Humanity is an ocean; if a few drops of the ocean are polluted then the ocean is tainted."
-	//continue starting here https://wh40k.lexicanum.com/wiki/Thought_for_the_day_(I_-_P)
+	"Humanity is an ocean; if a few drops of the ocean are polluted then the ocean is tainted.",
+	"If a job's worth doing it's worth dying for!",
+	"If a man dies that another should live, that man's spirit shall eat at the Emperor's table.",
+	"If you cannot speak well of your Master, be silent!",
+	"Ignorance is a virtue.",
+	"Ignorance is bliss.",
+	"Ignorance is your best defence.",
+	"In an hour of Darkness a blind man is the best guide. In an age of Insanity look to the madman to show the way.",
+	"In courage we have no equals.",
+	"In our resolve we only reflect his purpose of will.",
+	"In the blazing furnace of battle we shall forge anew the iron will of yet a stronger race.",
+	"In the darkest of moments, the Emperor’s light shines brightest.",
+	"In the darkness a blind man is the best guide. In an age of Madness look to the madman to show the way.",
+	"Information Is Power.",
+	"Innocence proves nothing.",
+	"Inspiration grows from the barrel of a gun.",
+	"Intellect is a mask for traitors.",
+	"Intolerance is a blessing.",
+	"It is better that one hundred innocent fall before the wrath of the Emperor than one traitor kneels before the lords of darkness.",
+	"It is better to die for the Emperor than to live for yourself.",
+	"It is not in my mind to ask questions that cannot be answered. That is the soul standing upon the crossroad of vacillation. You search for wisdom, but achieve only a stasis of will.",
+	"It is not the Horror of War that troubles me but the Unseen Horrors of Peace.",
+	"It is the bitter tears that the Gods weep that bind us to their hearts.",
+	"It is through the Destruction of our Enemies, that we Earn our Salvation.",
+	"Kill the mutant.",
+	"Know No Fear.",
+	"Know the mutant; kill the mutant.",
+	"Know thine enemy.",
+	"Knowledge is half the battle.",
+	"Knowledge is power, guard it well.",
+	"Knowledge is to be feared!",
+	"Know your destination before you set out.",
+	"Know your duty!",
+	"Labour long in his sight.",
+	"Leniency is a sign of weakness!",
+	"Let faith protect your mind and metal your flesh.",
+	"Let your soul be armoured with Faith, driven on the tracks of Obedience which overcome all obstacles, and armed with the three great guns of Zeal, Duty and Purity.",
+	"Life is a prison, death a release.",
+	"Life is the Emperor's currency, spend it well.",
+	"Listen not to the alien, look not upon the alien, speak not unto the alien!",
+	"Look to your wargear!",
+	"Look upon the Emperor's Works and tremble!",
+	"Losses are acceptable. Failure is not.",
+	"Mankind stands on the shoulders of the Martyred.",
+	"May the Emperor's Wrath forever cleanse our souls.",
+	"Mercy is a sign of weakness.",
+	"My armour is contempt.",
+	"Negotiation is surrender.",
+	"Never forget, never forgive.",
+	"No army is big enough to conquer the galaxy. But faith alone can overturn the universe.",
+	"No man died in His service that died in vain.",
+	"No Mercy. No Remorse. Just Kill.",
+	"No pity! No remorse! No fear!",
+	"Nobody is innocent, there are merely varying levels of guilt.",
+	"Not even the dead know the end of war.",
+	"Nothing can hide from the wrath of the Emperor.",
+	"Nothing inspires revenge quite like cold hearted hatred.",
+	"Obedience is blind.",
+	"Obedience is not enough.",
+	"The graves of warriors who have given their lives for the Emperor now outnumber the stars themselves.",
+	"Only in death does duty end.",
+	"Only the awkward question; only the foolish ask twice.",
+	"Only the insane have strength enough to prosper; only those that prosper truly judge what is sane.",
+	"Only the faithless question.",
+	"Only the lost understand true terror.",
+	"Only those that follow the guiding light of the Emperor may save their souls.",
+	"On the battlefield, valour is the lifeblood of victory.",
+	"Our enemies are mortal no longer. Face them squarely and without flinching from duty. Mercy for such as them is self-deception.",
+	"Our mercies destroy us.",
+	"Our presence remakes the past.",
+	"Over the faithful, fear has no dominion.",
+	"Pain is an illusion of the senses, despair is an illusion of the mind.",
+	"Peace is Hell.",
+	"Perseverance and silence are the highest virtues.",
+	"Pity ye not!",
+	"Place your trust in the Emperor's steel.",
+	"Power resides in the will of the Righteous.",
+	"Praise the sun that brings the dawn of our final doom.",
+	"Prayer cleanses the soul, but pain cleanses the body.",
+	"Pure in body, pure in heart.",
+	"Purge the unclean."
+	
+	//continue starting here https://wh40k.lexicanum.com/wiki/Thought_for_the_day_(Q_-_Z)
 	];
 	var ranNum = Math.floor(Math.random() * (thoughts.length));
 	
@@ -224,7 +305,7 @@ function copy()
 	alert("Copied text to clipboard.");
 }
 
-
+//unused screenshot function, WIP
 function ss()
 {
 	html2canvas(document.getElementById("dataslate"), {
@@ -241,8 +322,3 @@ function ss()
 	  console.log(e);
 	});
 }
-
-
-
-
-//use rip.js and https://www.w3schools.com/js/js_date_methods.asp to do dates
