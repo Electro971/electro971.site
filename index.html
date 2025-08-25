@@ -2,70 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title></title>
+  <title>Abe Shuler</title>
   <link href="style.css" rel="stylesheet" />
 </head>
+
+<main>
 <body>
+<h1>
+<a href="40K.html">40K Transmission Creator</a>
+</h1>
+</main>
 
-	<script src="./script.js"></script>
-	<script src="./html2canvas.min.js" defer></script>
-  
-	<div id="header" class="flex-class">
-		<h1>40K Transmission Creator</h1>
-	</div>
-	<main>
-	<div id="content" class = "flex-class">
-		<div id="panel">
-		<form id="inputForm">
-		<label for="transmitted">Transmitted: <span title="Planet transmitted from">(?)</span></label><br>
-		<input type="text" id="transmitted" name="transmitted"><br>
-		
-		<label for="recieved">Recieved: <span title="Planet recieved on">(?)</span></label><br>
-		<input type="text" id="recieved" name="recieved"><br>
-		
-		<label for="date">Date: <span title="Date, using the Imperial Dating System">(?)</span></label><br>
-		<input type="text" id="date" name="date">
-		<button type="button" onclick="toImperial()" title="This is actually quite difficult to calculate. This is an approximation.">Today</button><br>
-		
-		<label for="ref">Ref: <span title="An order designation, followed by random numbers and then letters">(?)</span></label><br>
-		<input type="text" id="ref" name="ref"><br>
-		
-		<label for="author">Author: </label><br>
-		<input type="text" id="author" name="author"><br>
-		
-		<label for="subj">Subject: </label><br>
-		<input type="text" id="subj" name="subj"><br>
-		
-		<label for="main">Message Text: </label><br>
-		<textarea id="main" name="main" rows="5" cols="50"></textarea><br>
-		
-		<label for="thought">Thought: <span title="Sign-off message, often an inspirational quote">(?)</span></label><br>
-		<textarea id="thought" name="thought" rows="3" cols="20"></textarea>
-		<button type="button" onclick="randomThought()">Random Thought</button><br>
-		
-		<button type = "button" onclick="printOut()">Generate</button>
-		<button type = "button" onclick="reset()">Reset</button>
-		<br>
-		<button type="button" onclick="copy()">Copy to Clipboard</button>
-		<!--<button type="button" onclick="ss()">Download (with image)</button>-->
-	</form>
-	
-	<div id="options">
-		<h2>Options</h2>
-		<label for="fsize">Font Size: </label><br>
-		<input id="fsize" type="number" value="15" min="0" max= "25">
-	</div>
-	
-	</div>
-	
-		<div id="output-box" class="container">
-
-			<img id="dataslate" src="https://i.pinimg.com/736x/62/dc/19/62dc19b9a6c43232b458949429a90d0c.jpg" alt="dataslate image")>
-			<p id="output" class="topleft"></p>
-		
-		</div>
-	
-	</main>
-	
 </body>
-</html>
