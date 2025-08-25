@@ -1,0 +1,76 @@
+html {
+	font-family: minion, "Times New Roman";
+	background-image: url(https://img.freepik.com/free-photo/wooden-floor-background_53876-88628.jpg?semt=ais_hybrid&w=740);
+	background-color: white;
+}
+
+@font-face {
+    font-family: casablanca;
+    src: url(CasablancaAntique.ttf);
+}
+
+@font-face {
+	font-family: minion;
+	src: url(MinionPro-Regular.otf);
+}
+
+.flex-class {
+	display: flex;
+	flex-wrap: no-wrap;
+	flex-direction: row;
+	justify-content: space-around;
+	align-content: space-around;
+}
+
+.container {
+  position: relative;
+}
+
+.topleft {
+  position: absolute;
+  top: 8px;
+  left: 12px;
+  font-size: 15px;
+  max-width: 75%;
+  text-wrap: wrap;
+  
+	word-break: break-word;
+	white-space: normal;
+}
+
+h1 {
+	font-family: casablanca;
+}
+
+textarea {
+	text-wrap: wrap;
+}
+
+#header {
+	justify-content: center;
+}
+
+#content {
+	background-color: gray;
+	margin: 0% 10% 0% 10%;
+	padding: 5px 5px 5px 5px;
+}
+
+#output-box {
+	display: flex;
+	min-width: 300px;
+	height: auto;
+	margin: 15px;
+}
+
+#dataslate {
+	min-width: 300px;
+	height: auto;
+}
+
+#output {
+	font-family: monospace;
+	color: green;
+	padding-left: 10%;
+	padding-top: 6%;
+}
