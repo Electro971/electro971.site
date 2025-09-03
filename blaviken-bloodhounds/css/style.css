@@ -53,6 +53,7 @@ header {
 
 .flex-div {
   margin: 2rem;
+  align-content: center;
 }
 
 .stadium-image {
