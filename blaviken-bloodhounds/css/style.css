@@ -116,8 +116,8 @@ footer {
 }
 
 .standings-table {
+  margin: 0;
   width: 90%;
-  margin: 1rem auto;
   border-collapse: collapse;
   background: #222;
   color: #eee;
@@ -140,6 +140,11 @@ footer {
 }
 
 .match-reports {
+  width: 90%;
+  margin: 2rem auto;
+}
+
+.season-summary {
   width: 90%;
   margin: 2rem auto;
 }
