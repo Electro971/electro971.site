@@ -3,6 +3,15 @@
   src: url(../assets/fonts/Graduate-Regular.ttf);
 }
 
+a {
+  color: #B5A642; /* Gold color */
+  text-decoration: none;
+}
+
+a:hover {
+  color: #6a0001;
+}
+
 @font-face {
   font-family: montserrat;
   src: url(../assets/fonts/Montserrat-VariableFont_wght.ttf);
