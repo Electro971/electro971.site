@@ -46,9 +46,10 @@ header {
 }
 
 .warning {
+  width: 90%;
   background: #6a0001;
   font-size: 11px;
-  padding: 1rem;
+  padding: 0.5rem;
   margin: 1rem 0;
   border-left: 5px solid #B5A642;
   box-shadow: 0 2px 6px rgba(0,0,0,0.5);
@@ -147,8 +148,12 @@ section {
 footer {
   text-align: center;
   background: #222;
-  padding: 1rem;
+  padding: 1rem 0;
   font-size: 0.9rem;
+  position: relative;
+  width: 100%;
+  bottom: 0;
+  margin: 0;
 }
 
 .standings-table {
@@ -182,7 +187,7 @@ footer {
 
 .season-summary {
   width: 90%;
-  margin: 2rem auto;
+  margin: auto;
 }
 
 .testimonial {
@@ -291,8 +296,12 @@ footer {
     flex-direction: column;
     align-items: center;
   }
-  
+
   .flex-div {
     margin: 1rem 0;
+  }
+
+  section {
+    padding: 1rem 0;
   }
 }
