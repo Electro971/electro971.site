@@ -37,6 +37,23 @@ header {
   justify-content: center; /* Center the content horizontally */
 }
 
+.quote {
+  background: #1a1a1a;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-left: 5px solid #6a0001;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+}
+
+.warning {
+  background: #6a0001;
+  font-size: 11px;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-left: 5px solid #B5A642;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+}
+
 .team-logo {
   max-height: 120px;
   margin-right: 1.5rem;
@@ -53,6 +70,7 @@ header {
 
 .flex-div {
   margin: 2rem;
+  align-content: center;
 }
 
 .stadium-image {
