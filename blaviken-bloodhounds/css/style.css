@@ -150,7 +150,6 @@ nav ul li a:hover {
 
 section {
   padding: 1.5rem;
-  border-bottom: 1px solid #333;
 }
 
 footer {
@@ -280,6 +279,22 @@ footer {
 
 .player-card:hover .card-back {
   transform: rotateX(360deg);
+}
+
+section article {
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #333;
+  padding-bottom: 1rem;
+}
+
+section article:hover {
+  background: #222;
+}
+
+.date {
+  font-size: 0.9rem;
+  color: #B5A642;
+  margin-bottom: 0.5rem;
 }
 
 
