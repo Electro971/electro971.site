@@ -287,6 +287,16 @@ footer {
   font-family: graduate, "Trebuchet MS", sans-serif;
 }
 
+.injured {
+  color: #6a0001;
+  font-weight: bold;
+}
+
+.active {
+  color: #B5A642;
+  font-weight: bold;
+}
+
 section article {
   margin-bottom: 1.5rem;
   border-bottom: 1px solid #333;
