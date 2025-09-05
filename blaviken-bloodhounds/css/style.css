@@ -267,7 +267,7 @@ footer {
 }
 
 .card-back {
-  background: #111;
+  background: #222;
   color: #eee;
   transform: rotateX(180deg);
   box-shadow: 0 4px 8px rgba(0,0,0,0.5);
@@ -279,6 +279,12 @@ footer {
 
 .player-card:hover .card-back {
   transform: rotateX(360deg);
+}
+
+.player-card h3, 
+.player-card p
+{
+  font-family: graduate, "Trebuchet MS", sans-serif;
 }
 
 section article {
@@ -295,6 +301,12 @@ section article:hover {
   font-size: 0.9rem;
   color: #B5A642;
   margin-bottom: 0.5rem;
+}
+
+.grad-text {
+  font-family: graduate, "Trebuchet MS", sans-serif;
+  font-size: 1.2rem;
+  color: #B5A642;
 }
 
 
