@@ -78,6 +78,14 @@ header {
   border-radius: 5px;
 }
 
+h2.subtitle {
+  font-size: 1.7rem;
+  color: #B5A642;
+  border-bottom: 2px solid #6a0001;
+  padding-bottom: 0.3rem;
+  margin-bottom: 1rem;
+}
+
 #menu-toggle:hover {
   background: #B5A642;
 }
