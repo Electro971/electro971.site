@@ -320,6 +320,11 @@ section article:hover {
 
 
 @media screen and (max-width: 600px) {
+  main {
+    padding: 0 1rem;
+    
+  }
+
   .team-logo {
     display: none;
   }
