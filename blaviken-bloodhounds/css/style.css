@@ -255,9 +255,37 @@ footer p {
 }
 
 .card-front {
-  background: #6a0001;
   color: #fff;
   box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+}
+
+.card-front h3 {
+  background-color: #222;
+}
+
+.card-front p {
+  background-color: #222;
+}
+
+.khorngor {
+  background-image: url('../assets/images/khorngor.jpg');
+  background-size: 450px;
+  background-repeat: no-repeat;
+  background-position: 40% 15%;
+}
+
+.bloodseeker {
+  background-image: url('../assets/images/bloodseeker.jpg');
+  background-size: 450px;
+  background-repeat: no-repeat;
+  background-position: 40% 15%;
+}
+
+.lineman {
+  background-image: url('../assets/images/linemen.jpg');
+  background-size: 875px;
+  background-repeat: no-repeat;
+  background-position: 47% 35%;
 }
 
 .card-front h3 {
