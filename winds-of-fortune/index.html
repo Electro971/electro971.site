@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Winds of Fortune</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="js/main.js" defer></script>
+</head>
+<body onload="initialize()">
+  <!-- Game Container -->
+  <div id="game-container">
+    <!-- Map Area -->
+     <div id="port">
+        <h2>You are at Port<span id="port-name"><!--port name here--></span></h2>
+        <div id="port-description">
+            <p><!--Port description here--></p>
+        </div>
+        <div id="port-actions">
+            <button onclick="">Tavern</button>
+            <button onclick="">Harbour</button>
+            <button onclick="">Set Sail</button>
+        </div>
+     </div>
+    <div id="map">
+      <!--<img id="ship" src="assets/images/ship.png" alt="Player Ship" />-->
+      <!-- Ports could be clickable elements -->
+      <div class="port" id="port-a" style="top: 60%; left: 20%;">Port A</div>
+      <div class="port" id="port-b" style="top: 30%; left: 70%;">Port B</div>
+    </div>
+
+    <!-- UI Panel -->
+    <div id="ui-panel">
+        <h2 id="panel-header">Captain’s Log</h2>
+        <div id="log"></div>
+        <div id="inventory"></div>
+        <div id="ship-status">
+            <h3><!--Player ship name here--></h3>
+            <p>Ship Health: <span id="ship-health">100</span></p>
+            <p>Gold: <span id="gold-amount">500</span></p>
+            <p>Supplies: <span id="supply-amount">100</span></p>
+            <p>Crew Morale: <span id="crew-morale">80</span></p>
+        </div>
+        <div id="options">
+            <button onclick="openTab('log'), startNewGame()">New Game</button>
+            <button onclick="loadGame()">Load Game</button>
+            <button onclick="saveGame()">Save Game</button>
+        </div>
+      <div id="actions">
+        <button id="log-btn" onclick="openTab('log')">Log</button>
+        <button id="ship-btn" onclick="openTab('ship')">Ship</button>
+        <button id="trade-btn" onclick="openTab('inventory')">Inventory</button>
+        <button id="options-btn" onclick="openTab('options')">Options</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
