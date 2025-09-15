@@ -10,6 +10,18 @@ body {
   height: 100vh;
 }
 
+h1 {
+  font-size: larger;
+}
+
+h2 {
+  font-size: large;
+}
+
+h3 {
+  font-size: medium;
+}
+
 /* Game container holds map + UI panel side by side */
 #game-container {
   display: flex;
@@ -21,23 +33,40 @@ body {
 }
 
 #port {
-    flex: 3;
-    position: relative;
-    background: magenta;
-    background-size: cover;
-    border-right: 3px solid #8b5e3c;
+  flex: 3;
+  position: relative;
+  background: magenta;
+  background-size: cover;
+  border-right: 3px solid #8b5e3c;
+  padding: 1rem;
 }
 
-#tavern {
-    display: none;
+#market-items {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
-#harbour {
-    display: none;
+.market-item {
+    color: black;
+    padding: 1rem;
+    margin: 1rem;
+    margin-bottom: 1rem;
+    align-content: center;
+    background-color: #ffd07f;
+    border-radius: 5px;
+    border:#8b5e3c 5px solid;
 }
 
-#market {
+#tavern, #harbour, #market{
     display: none;
+    height: 70%;
+    width: auto;
+    background-color: grey;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 5px;
+    border: 5px solid #8b5e3c;
 }
 
 #port-actions {
@@ -86,7 +115,7 @@ body {
 /* Port markers */
 .port {
   position: absolute;
-  width: 80px;
+  width: auto;
   height: auto;
   padding: 4px 8px;
   background: rgba(64, 77, 255, 0.8);

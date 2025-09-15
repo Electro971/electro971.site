@@ -12,14 +12,26 @@
   <div id="game-container">
     <!-- Map Area -->
      <div id="port">
-        <h2>You are at Port<span id="port-name"><!--port name here--></span></h2>
+        <h2>You are at <span id="port-name"></span></h2>
+        <h3>Gold: <span id="gold-header"></span></h3>
         <div id="port-description">
             <p><!--Port description here--></p>
     </div>
      <div id="market">
         <h2>Market</h2>
         <div id="market-items">
-            <!-- Market items will be dynamically populated here -->
+          <div id="wood-item" class="market-item">
+            <h3>Wood - <span id="wood-price"></span></h3>
+            <button id="wood-btn" onclick="buyItem('wood')">Buy</button>
+          </div>
+          <div id="iron-item" class="market-item">
+            <h3>Iron -<span id="iron-price"></span></h3>
+            <button onclick="buyItem('iron')">Buy</button>
+          </div>
+          <div id="supplies-item" class="market-item">
+            <h3>Supplies - <span id="supplies-price"></span></h3>
+            <button onclick="buyItem('supplies')">Buy</button>
+          </div>
         </div>
      </div>
      <div id="tavern">
@@ -38,8 +50,8 @@
     <div id="map">
       <!--<img id="ship" src="assets/images/ship.png" alt="Player Ship" />-->
       <div id="ports-overlay">
-        <div class="port" id="port-a" style="top: 60%; left: 20%;" onclick="visitPort('Port A')">Port A</div>
-        <div class="port" id="port-b" style="top: 30%; left: 70%;" onclick="visitPort('Port B')">Port B</div>
+        <div class="port" id="port-a" style="top: 45%; left: 30%;" onclick="visitPort(port_royal)">Port Royal</div>
+        <div class="port" id="port-b" style="top: 35%; left: 70%;" onclick="visitPort(tortuga)">Tortuga</div>
       </div>
     </div>
 
@@ -47,11 +59,12 @@
     <div id="ui-panel">
         <h2 id="panel-header">Captain’s Log</h2>
         <div id="log"></div>
-        <div id="inventory"></div>
+        <div id="inventory">
+            <p>Gold: <span id="gold-amount"></span></p>
+        </div>
         <div id="ship-status">
             <h3><!--Player ship name here--></h3>
             <p>Ship Health: <span id="ship-health">100</span></p>
-            <p>Gold: <span id="gold-amount">500</span></p>
             <p>Supplies: <span id="supply-amount">100</span></p>
             <p>Crew Morale: <span id="crew-morale">80</span></p>
         </div>
