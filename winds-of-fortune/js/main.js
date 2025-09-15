@@ -13,10 +13,12 @@ class player {
 class ship {
     name = "";
     speed = 0;
-    constructor(name, speed)
+    cargo = {"wood":0, "iron":0, "supplies":0};
+    constructor(name, speed, cargo)
     {
         this.name = name;
         this.speed = speed;
+        this.cargo = cargo;
     }
 }
 
@@ -30,10 +32,6 @@ class port {
     }
 }
 
-port_royal = new port("Port Royal", {"wood": 5, "iron": 10, "supplies": 15});
-tortuga = new port("Tortuga", {"wood": 6, "iron": 9, "supplies": 14});
-nassau = new port("Nassau", {"wood": 4, "iron": 11, "supplies": 16});
-
 let items =
 {
     "wood": {name: "Wood", description: "Basic building material.", type: "material", value: 5},
@@ -41,11 +39,15 @@ let items =
     "supplies": {name: "Supplies", description: "Essential for long voyages.", type: "consumable", value: 15},
 }
 
+port_royal = new port("Port Royal", {"wood": items.wood.value, "iron": items.iron.value, "supplies": items.supplies.value});
+tortuga = new port("Tortuga", {"wood": items.wood.value, "iron": items.iron.value, "supplies": items.supplies.value});
+
 function checkSave() {
     return localStorage.getItem('saveData') !== null;
 }
 
-p1 = new player(0,0);
+p1 = new player("default",1000);
+s1 = new ship("",0,{"wood":0, "iron":0, "supplies":0});
 
 function initialize() {
     if (checkSave()) {
@@ -58,7 +60,8 @@ function initialize() {
 function startNewGame() {
     // Initialize new game state
     console.log("Starting a new game...");
-    p1 = new player(0,0,tortuga);
+    p1 = new player("Default",100,tortuga);
+    s1 = new ship("The Default",0,{"wood":0, "iron":0, "supplies":0});
     localStorage.clear();
     console.log("local storage cleared");
     // Set up initial player stats, inventory, etc.
@@ -135,18 +138,41 @@ function updateUI() {
     document.getElementById("wood-price").innerHTML = p1.currentLoc.prices.wood;
     document.getElementById("iron-price").innerHTML = p1.currentLoc.prices.iron;
     document.getElementById("supplies-price").innerHTML = p1.currentLoc.prices.supplies;
+    document.getElementById("wood-amount").innerHTML = s1.cargo.wood;
+    document.getElementById("iron-amount").innerHTML = s1.cargo.iron;
+    document.getElementById("supplies-amount").innerHTML = s1.cargo.supplies;
+}
+
+function randomizePrices()
+{
+    for (let thing in tortuga.prices) {
+        tortuga.prices[thing] = Math.floor(Math.random() * (items[thing].value * 2 - items[thing].value / 2)) + items[thing].value / 2;
+    }
+    for (let thing in port_royal.prices) {
+        port_royal.prices[thing] = Math.floor(Math.random() * (items[thing].value * 2 - items[thing].value / 2)) + items[thing].value / 2;
+    }
 }
 
 function buyItem(item)
 {
-    switch (item)
-    {
-        case "iron":
-            p1.gold-=5;
-            break;
-    }
+    let quantity = parseInt(document.getElementById("quantity").value);
+    p1.gold -= (p1.currentLoc.prices[item]) * quantity;
+    s1.cargo[item] += quantity;
     updateUI();
 }
+
+function sellItem(item)
+{
+    let quantity = parseInt(document.getElementById("quantity").value);
+    if (s1.cargo[item] < quantity) {
+        updateLog("You don't have enough " + items[item].name + " to sell.");
+        return;
+    }
+    s1.cargo[item] -= quantity;
+    p1.gold += (p1.currentLoc.prices[item]) * quantity;
+    updateUI();
+}
+
 
 function openTab(tabName) {
     switch(tabName) {
@@ -217,8 +243,14 @@ function openTab(tabName) {
 
 function setSail()
 {
+    if (s1.cargo["supplies"] <= 0) {
+        updateLog("You need supplies to set sail!");
+        return;
+    }
     updateLog("Set sail on your adventure!");
     openTab('map');
+    s1.cargo["supplies"] -= 1;
+    randomizePrices();
 }
 
 function visitPort(port)

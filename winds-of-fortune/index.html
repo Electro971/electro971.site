@@ -19,18 +19,23 @@
     </div>
      <div id="market">
         <h2>Market</h2>
+        <h3>Buy/Sell Amount: </h3>
+        <input type="number" id="quantity" value="1" min="1" style="width: 50px;"/>
         <div id="market-items">
           <div id="wood-item" class="market-item">
             <h3>Wood - <span id="wood-price"></span></h3>
-            <button id="wood-btn" onclick="buyItem('wood')">Buy</button>
+            <button id="wood-buy-btn" onclick="buyItem('wood')">Buy</button>
+            <button onclick="sellItem('wood')">Sell</button>
           </div>
           <div id="iron-item" class="market-item">
-            <h3>Iron -<span id="iron-price"></span></h3>
+            <h3>Iron - <span id="iron-price"></span></h3>
             <button onclick="buyItem('iron')">Buy</button>
+            <button onclick="sellItem('iron')">Sell</button>
           </div>
           <div id="supplies-item" class="market-item">
             <h3>Supplies - <span id="supplies-price"></span></h3>
             <button onclick="buyItem('supplies')">Buy</button>
+            <button onclick="sellItem('supplies')">Sell</button>
           </div>
         </div>
      </div>
@@ -61,12 +66,15 @@
         <div id="log"></div>
         <div id="inventory">
             <p>Gold: <span id="gold-amount"></span></p>
+            <p>Wood: <span id="wood-amount"></span></p>
+            <p>Iron: <span id="iron-amount"></span></p>
+            <p>Supplies: <span id="supplies-amount"></span></p>
         </div>
         <div id="ship-status">
-            <h3><!--Player ship name here--></h3>
-            <p>Ship Health: <span id="ship-health">100</span></p>
-            <p>Supplies: <span id="supply-amount">100</span></p>
-            <p>Crew Morale: <span id="crew-morale">80</span></p>
+            <em><h3>The Default</h3></em>
+            <p>Ship Health: <span id="ship-health">0</span></p>
+            <p>Supplies: <span id="supply-amount">0</span></p>
+            <p>Crew Morale: <span id="crew-morale">0</span></p>
         </div>
         <div id="options">
             <button onclick="openTab('log'), startNewGame()">New Game</button>
