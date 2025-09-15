@@ -1,3 +1,16 @@
+let items =
+{
+    "wood": {name: "Wood", description: "Basic building material.", type: "material", value: 5},
+    "iron": {name: "Iron", description: "Used for crafting stronger items.", type: "material", value: 10},
+    "supplies": {name: "Supplies", description: "Essential for long voyages.", type: "consumable", value: 15},
+}
+
+cargo = 
+{
+    "wood": 0,
+    "iron": 0,
+}
+
 function checkSave() {
     return localStorage.getItem('saveData') !== null;
 }
@@ -43,7 +56,7 @@ function updateLog(message) {
     entry.classList.add('log-entry');
     entry.textContent = message;
     logDiv.prepend(entry);
-    logDiv.scrollTop = logDiv.scrollHeight; // Auto-scroll to bottom
+    logDiv.scrollTop = 0; // Scroll to top to show the latest entry
 }
 
 function saveGame() {
@@ -91,6 +104,8 @@ function openTab(tabName) {
             document.getElementById("inventory").style.display = "none";
             document.getElementById("options").style.display = "none";
             document.getElementById("ship-status").style.display = "none";
+            document.getElementById("port").style.display = "block";
+            document.getElementById("map").style.display = "none";
             break;
         case 'ship':
             document.getElementById("panel-header").textContent = "Ship";
@@ -98,6 +113,8 @@ function openTab(tabName) {
             document.getElementById("inventory").style.display = "none";
             document.getElementById("options").style.display = "none";
             document.getElementById("ship-status").style.display = "block";
+            document.getElementById("port").style.display = "none";
+            document.getElementById("map").style.display = "none";
             break;
         case 'inventory':
             document.getElementById("panel-header").textContent = "Inventory";
@@ -105,7 +122,8 @@ function openTab(tabName) {
             document.getElementById("inventory").style.display = "block";
             document.getElementById("options").style.display = "none";
             document.getElementById("ship-status").style.display = "none";
-
+            document.getElementById("port").style.display = "none";
+            document.getElementById("map").style.display = "none";
             break;
         case 'options':
             document.getElementById("panel-header").textContent = "Options";
@@ -113,8 +131,45 @@ function openTab(tabName) {
             document.getElementById("inventory").style.display = "none";
             document.getElementById("options").style.display = "block";
             document.getElementById("ship-status").style.display = "none";
+            document.getElementById("port").style.display = "none";
+            document.getElementById("map").style.display = "none";
+            break;
+        case 'map':
+            document.getElementById("port").style.display = "none";
+            document.getElementById("map").style.display = "none";
+            document.getElementById("map").style.display = "block";
+            document.getElementById("market").style.display = "none";
+            break;
+        case 'market':
+            document.getElementById("harbour").style.display = "none";
+            document.getElementById("tavern").style.display = "none";
+            document.getElementById("market").style.display = "block";
+            break;
+        case 'harbour':
+            document.getElementById("market").style.display = "none";
+            document.getElementById("tavern").style.display = "none";
+            document.getElementById("harbour").style.display = "block";
+            break;
+        case 'tavern':
+            document.getElementById("market").style.display = "none";
+            document.getElementById("harbour").style.display = "none";
+            document.getElementById("tavern").style.display = "block";
             break;
         default:
             console.error("Unknown tab: " + tabName);
     }
+}
+
+function setSail()
+{
+    updateLog("Set sail on your adventure!");
+    openTab('map');
+}
+
+function visitPort(portName)
+{
+    updateLog("Sailing to " + portName + "...");
+    sleep(2000).then(() => {
+        updateLog("Welcome to " + portName + "!");
+    });
 }

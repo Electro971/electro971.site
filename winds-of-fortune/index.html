@@ -15,18 +15,32 @@
         <h2>You are at Port<span id="port-name"><!--port name here--></span></h2>
         <div id="port-description">
             <p><!--Port description here--></p>
+    </div>
+     <div id="market">
+        <h2>Market</h2>
+        <div id="market-items">
+            <!-- Market items will be dynamically populated here -->
         </div>
-        <div id="port-actions">
-            <button onclick="">Tavern</button>
-            <button onclick="">Harbour</button>
-            <button onclick="">Set Sail</button>
-        </div>
+     </div>
+     <div id="tavern">
+        <h2>Tavern</h2>
+     </div>
+     <div id="harbour">
+        <h2>Harbour</h2>
+     </div>
+     <div id="port-actions">
+        <button onclick="openTab('tavern')">Tavern</button>
+        <button onclick="openTab('market')">Market</button>
+        <button onclick="openTab('harbour')">Harbour</button>
+        <button onclick="setSail()">Set Sail</button>
+    </div>
      </div>
     <div id="map">
       <!--<img id="ship" src="assets/images/ship.png" alt="Player Ship" />-->
-      <!-- Ports could be clickable elements -->
-      <div class="port" id="port-a" style="top: 60%; left: 20%;">Port A</div>
-      <div class="port" id="port-b" style="top: 30%; left: 70%;">Port B</div>
+      <div id="ports-overlay">
+        <div class="port" id="port-a" style="top: 60%; left: 20%;" onclick="visitPort('Port A')">Port A</div>
+        <div class="port" id="port-b" style="top: 30%; left: 70%;" onclick="visitPort('Port B')">Port B</div>
+      </div>
     </div>
 
     <!-- UI Panel -->
