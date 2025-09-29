@@ -15,16 +15,23 @@ body {
 	border-radius: 12px;
 }
 
-#img-con {
+#summary {
 	display: flex;
-	justify-content: end;
+	flex-direction: column;
+}
+
+#summary-content {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
 }
 
 img {
-	position: absolute;
-	height: 10em;
+	width: 100%;
+	height: auto;
+	margin-left: 2rem;
 	border-radius: 5px;
-	border: 5px solid #522D80;
+	border: 5px solid #522D80
 }
 
 header {
