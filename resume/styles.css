@@ -29,7 +29,7 @@ body {
 img {
 	width: 100%;
 	height: auto;
-	margin-left: 2rem;
+	margin: 2rem;
 	border-radius: 5px;
 	border: 5px solid #522D80
 }
@@ -85,7 +85,8 @@ li {
 
 @media (max-width: 768px) {
 	.container {
-		padding: 16px 6px;
+		padding: 2rem;
+		margin: 2rem;
 	}
 	h1 {
 		font-size: 2rem;
@@ -93,10 +94,8 @@ li {
 	h2 {
 		font-size: 1.1rem;
 	}
-	#img-con {
-		display: block;
-	}
-	img {
-		position: relative;
+	#summary-content {
+		flex-direction: column;
+		align-items: center;
 	}
 }
