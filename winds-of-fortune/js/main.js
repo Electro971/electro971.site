@@ -12,7 +12,6 @@ class player {
 
 class ship {
     name = "";
-    speed = 0;
     cargo = {"wood":0, "iron":0, "supplies":0};
     constructor(name, speed, cargo)
     {
@@ -20,6 +19,16 @@ class ship {
         this.speed = speed;
         this.cargo = cargo;
     }
+}
+
+const CREW_PRICE = 10;
+
+class sloop extends ship {
+    FULL_CREW = 10;
+    currentCrew = 0;
+    MAX_HEALTH = 10;
+    SPEED = 5;
+    currentHealth = this.MAX_HEALTH;
 }
 
 class port {
@@ -47,7 +56,7 @@ function checkSave() {
 }
 
 p1 = new player("default",1000);
-s1 = new ship("",0,{"wood":0, "iron":0, "supplies":0});
+s1 = new sloop("",0,{"wood":0, "iron":0, "supplies":0});
 
 function initialize() {
     if (checkSave()) {
@@ -88,6 +97,10 @@ function clearLog() {
     logDiv.innerHTML = '';
 }
 
+/**
+ * 
+ * @param {string} message 
+ */
 function updateLog(message) {
     const logDiv = document.getElementById('log');
     const entry = document.createElement('div');
@@ -105,8 +118,11 @@ function saveGame() {
             gold: p1.gold,
             currentLoc: p1.currentLoc,
         },
-        ship: {
-
+        sloop:{
+            speed: s1.SPEED,
+            cargo: s1.cargo,
+            name: s1.name,
+            currentCrew: s1.currentCrew,
         }
         // Add more game state data as needed
     };
@@ -120,6 +136,7 @@ function loadGame() {
         // Load game state from saveData
         console.log("Game loaded.");
         p1 = saveData.player;
+        s1 = saveData.ship;
         updateLog("Welcome back, Captain! Your adventure continues.");
         updateUI();
     } else {
@@ -141,6 +158,10 @@ function updateUI() {
     document.getElementById("wood-amount").innerHTML = s1.cargo.wood;
     document.getElementById("iron-amount").innerHTML = s1.cargo.iron;
     document.getElementById("supplies-amount").innerHTML = s1.cargo.supplies;
+    document.getElementById("ship-health").innerHTML = s1.MAX_HEALTH;
+    document.getElementById("crew-amount").innerHTML = s1.currentCrew;
+    document.getElementById("crew-max").innerHTML = s1.FULL_CREW;
+    document.getElementById("crew-price").innerHTML = CREW_PRICE;
 }
 
 function randomizePrices()
@@ -155,9 +176,24 @@ function randomizePrices()
 
 function buyItem(item)
 {
-    let quantity = parseInt(document.getElementById("quantity").value);
-    p1.gold -= (p1.currentLoc.prices[item]) * quantity;
-    s1.cargo[item] += quantity;
+    if(item == "crew")
+    {
+        if (s1.currentCrew < s1.FULL_CREW)
+        {
+            p1.gold -= CREW_PRICE;
+            s1.currentCrew+=1;
+        }
+        else
+        {
+            updateLog("Crew is full!");
+        }
+    }
+    else
+    {
+        let quantity = parseInt(document.getElementById("quantity").value);
+        p1.gold -= (p1.currentLoc.prices[item]) * quantity;
+        s1.cargo[item] += quantity;
+    }
     updateUI();
 }
 

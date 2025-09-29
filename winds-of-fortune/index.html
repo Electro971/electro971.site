@@ -41,6 +41,10 @@
      </div>
      <div id="tavern">
         <h2>Tavern</h2>
+        <div id="crew-item" class="market-item">
+            <h3>Crew - <span id="crew-price"></span></h3>
+            <button onclick="buyItem('crew')">Recruit</button>
+          </div>
      </div>
      <div id="harbour">
         <h2>Harbour</h2>
@@ -74,6 +78,7 @@
             <em><h3>The Default</h3></em>
             <p>Ship Health: <span id="ship-health">0</span></p>
             <p>Supplies: <span id="supply-amount">0</span></p>
+            <p>Crew: <span id="crew-amount">0</span>/<span id="crew-max">0</span></p>
             <p>Crew Morale: <span id="crew-morale">0</span></p>
         </div>
         <div id="options">
