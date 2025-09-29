@@ -15,6 +15,18 @@ body {
 	border-radius: 12px;
 }
 
+#img-con {
+	display: flex;
+	justify-content: end;
+}
+
+img {
+	position: absolute;
+	height: 10em;
+	border-radius: 5px;
+	border: 5px solid #522D80;
+}
+
 header {
 	border-bottom: 2px solid #F56600;
 	padding-bottom: 18px;
@@ -64,7 +76,7 @@ li {
 	font-weight: 600;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
 	.container {
 		padding: 16px 6px;
 	}
@@ -73,5 +85,11 @@ li {
 	}
 	h2 {
 		font-size: 1.1rem;
+	}
+	#img-con {
+		display: block;
+	}
+	img {
+		position: relative;
 	}
 }
