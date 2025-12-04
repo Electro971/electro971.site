@@ -1,0 +1,140 @@
+/* ===== General Styling ===== */
+body {
+  margin: 0;
+  padding: 0;
+  background: #efe4d3 url('https://i.imgur.com/5NYsJxJ.png') repeat; /* parchment texture */
+  font-family: 'Georgia', serif;
+  color: #362b24;
+}
+
+.farm-wrapper {
+  padding: 30px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* ===== Header ===== */
+.farm-header {
+  text-align: centre;
+  margin-bottom: 30px;
+}
+
+.farm-header h1 {
+  font-size: 48px;
+  color: #5a3e27;
+  text-shadow: 0 3px 5px rgba(0,0,0,0.2);
+}
+
+.subtitle {
+  font-size: 18px;
+  color: #6a5b4d;
+  margin-top: 5px;
+  opacity: 0.8;
+}
+
+/* ===== Farm Grid ===== */
+.farm-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+/* ===== Plot Card ===== */
+.plot {
+  background: #fdf8f2;
+  border: 3px solid #c9a678;
+  border-radius: 10px;
+  min-height: 200px;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25),
+              inset 0 0 25px rgba(0,0,0,0.05);
+  overflow: hidden;
+  padding: 15px;
+}
+
+.plot-inner {
+  position: relative;
+  z-index: 10;
+}
+
+.plot-label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #5e4631;
+}
+
+/* ===== Buttons ===== */
+.plot-action {
+  padding: 8px 14px;
+  background: #c89e63;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #fff;
+  transition: transform 0.2s;
+}
+
+.plot-action:hover {
+  transform: scale(1.05);
+}
+
+/* ===== Crop Growth Visuals ===== */
+
+/* Subtle animation on sprouting crops */
+.crop-sprout {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 60px;
+  background: url('https://i.imgur.com/2z5y1oZ.png') no-repeat centre/contain; /* sprout image */
+  opacity: 0.9;
+  animation: sprout-bob 2.5s ease-in-out infinite;
+}
+
+@keyframes sprout-bob {
+  0%, 100% { transform: translate(-50%, 0); }
+  50% { transform: translate(-50%, -5px); }
+}
+
+/* Fully grown crop */
+.crop-ready {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 80px;
+  background: url('https://i.imgur.com/CVuW0IV.png') no-repeat centre/contain; /* wheat / hops bundle */
+  animation: gentle-rustle 3s ease-in-out infinite;
+}
+
+@keyframes gentle-rustle {
+  0%, 100% { transform: translateX(-50%) rotate(0deg); }
+  50% { transform: translateX(-50%) rotate(1deg); }
+}
+
+/* ===== Progress Bar ===== */
+.progress-bar {
+  background: #e0c8a9;
+  border-radius: 6px;
+  height: 14px;
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid #b1936a;
+  margin-top: 6px;
+}
+
+.progress-fill {
+  background: linear-gradient(90deg, #9ccf6a, #76b44f);
+  height: 100%;
+  transition: width 0.4s ease;
+}
+
+/* ===== Colour Themes for States ===== */
+.plot.empty { border-color: #d1b496; }
+.plot.growing { border-color: #9ccf6a; }
+.plot.ready { border-color: #e0a030; }

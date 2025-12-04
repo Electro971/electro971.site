@@ -1,33 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Idle Fishing</title>
-    <link rel="stylesheet" href="styles/style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tavern Master</title>
+  <link rel="stylesheet" href="styles/tavern_style.css" />
 </head>
 <body>
-    <h1>Idle Fishing</h1>
-    <div id="stats">
-        <p>Fish: <span id="fishCount">0</span></p>
-        <p>Fish per second: <span id="fps">0</span></p>
-        <p>Fish per click: <span id="fpc">1</span></p>
+<div class="tavern">
+
+
+  <!-- ===== Header ===== -->
+  <header class="tavern-header">
+    <div class="tavern-title">
+      <div class="tavern-logo">TM</div>
+      <h1>Tavern Master</h1>
+    </div>
+    <div class="tavern-meta">
+      <div class="small">Day 3 · Moonrise</div>
+      <div class="small">Reputation: 42</div>
+    </div>
+    <nav class="tavern-nav">
+  <div class="nav-inner">
+    <span class="nav-title">The Copper Tankard</span>
+
+    <ul class="nav-links">
+      <li><a href="tavern.html">Tavern</a></li>
+      <li><a href="farm.html">Farm</a></li>
+      <li><a href="storage.html">Storage</a></li>
+      <li><a href="market.html">Market</a></li>
+      <li><a href="settings.html">Settings</a></li>
+    </ul>
+  </div>
+</nav>
+  </header>
+
+  <!-- ===== Left Sidebar ===== -->
+  <aside class="sidebar">
+    <div class="panel tavern-info">
+      <h3>The Copper Kettle</h3>
+      <p class="muted">A modest inn with a loyal crowd.</p>
+
+      <div class="tavern-stats">
+        <div class="stat">
+          <span class="label">Gold</span>
+          128
+        </div>
+        <div class="stat">
+          <span class="label">Stock</span>
+          67%
+        </div>
+        <div class="stat">
+          <span class="label">Morale</span>
+          High
+        </div>
+      </div>
     </div>
 
-    <button id="fishButton">🎣 Cast Your Line</button>
+    <div class="panel ledger">
+      <div class="entry">[08:14] Adventurer ordered ale.</div>
+      <div class="entry">[08:17] Bard paid 10g for the room.</div>
+      <div class="entry">[08:21] Hunters requested stew.</div>
+    </div>
+  </aside>
 
-    <div id="shop">
-        <h2>Shop</h2>
+  <!-- ===== Main Floor ===== -->
+  <main class="floor">
+    <div class="floor-plan panel">
 
-        <button id="buyAuto">
-            Buy Auto-Fisher (<span id="autoPrice">10</span> fish)
-        </button>
+      <!-- Table 1 -->
+      <div class="table-card">
+        <div class="table-head">
+          <div class="table-name">Table 1</div>
+          <div class="table-status">Occupied</div>
+        </div>
 
-        <button id="buyRod">
-            Buy Better Rod (<span id="rodPrice">15</span> fish)
-        </button>
+        <div class="row" style="margin-top:12px;">
+          <div class="patron">
+            <div class="avatar">A</div>
+            Aldric
+          </div>
+          <div class="patron">
+            <div class="avatar">B</div>
+            Bryn
+          </div>
+        </div>
+
+        <div class="steam"></div>
+      </div>
+
+      <!-- Table 2 -->
+      <div class="table-card">
+        <div class="table-head">
+          <div class="table-name">Table 2</div>
+          <div class="table-status">Waiting</div>
+        </div>
+
+        <div class="row" style="margin-top:12px;">
+          <div class="patron">
+            <div class="avatar">S</div>
+            Selene
+          </div>
+        </div>
+      </div>
+
+      <!-- Table 3 -->
+      <div class="table-card">
+        <div class="table-head">
+          <div class="table-name">Table 3</div>
+          <div class="table-status">Empty</div>
+        </div>
+        <div class="sparkle"></div>
+      </div>
+
     </div>
 
-    <script src="scripts/script.js"></script>
+    <!-- Buttons -->
+    <div class="row">
+      <button class="btn btn-primary">Serve Ale</button>
+      <button class="btn btn-danger">Kick Rowdy Patron</button>
+    </div>
+  </main>
+
+  <!-- ===== Right Sidebar ===== -->
+  <aside class="rightbar">
+
+    <!-- Inventory -->
+    <div class="panel">
+      <h3 style="margin-top:0;">Inventory</h3>
+      <div class="inventory-grid">
+        <div class="inventory-item">
+          <div class="icn">🍺</div>
+          Ale (12)
+        </div>
+        <div class="inventory-item">
+          <div class="icn">🥩</div>
+          Meat (6)
+        </div>
+        <div class="inventory-item">
+          <div class="icn">🍞</div>
+          Bread (9)
+        </div>
+        <div class="inventory-item">
+          <div class="icn">🧅</div>
+          Onions (4)
+        </div>
+      </div>
+    </div>
+
+    <!-- Reputation Gauge -->
+    <div class="panel">
+      <h3 style="margin-top:0;">Reputation</h3>
+      <div class="gauge">
+        <i style="width: 42%;"></i>
+      </div>
+      <p class="flavour">The locals whisper your name with… mostly fondness.</p>
+    </div>
+
+  </aside>
+
+</div>
+<script src="scripts/tavern_script.js"></script>
 </body>
+
 </html>

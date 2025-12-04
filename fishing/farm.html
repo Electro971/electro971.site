@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Farm</title>
+  <link rel="stylesheet" href="styles/farm_style.css">
+</head>
+
+<body>
+  <div class="farm-wrapper">
+
+    <header class="farm-header">
+      <h1>Your Farmstead</h1>
+      <p class="subtitle">Where honest soil becomes tavern gold</p>
+    </header>
+
+    <section class="farm-grid">
+      <!-- Repeat these for each crop plot -->
+      <div class="plot empty">
+        <div class="plot-inner">
+          <span class="plot-label">Empty Plot</span>
+          <button class="plot-action">Plant Seeds</button>
+        </div>
+      </div>
+
+      <div class="plot growing">
+        <div class="crop-sprout"></div>
+        <div class="plot-inner">
+          <span class="plot-label">Wheat (Growing)</span>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 45%;"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="plot ready">
+        <div class="crop-ready"></div>
+        <div class="plot-inner">
+          <span class="plot-label">Hops (Ready!)</span>
+          <button class="plot-action">Harvest</button>
+        </div>
+      </div>
+
+      <!-- Add more plots as needed -->
+    </section>
+  </div>
+</body>
+</html>

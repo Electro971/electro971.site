@@ -1,0 +1,77 @@
+/* Root sizing for consistent scaling */
+:root {
+    font-size: 16px; /* Browsers adjust this automatically for smaller screens */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(#7ec8e3, #4a90e2);
+    color: #fff;
+    text-align: center;
+    padding: 5vh 5vw;
+}
+
+/* Titles scale more smoothly */
+h1 {
+    margin-bottom: 1rem;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+}
+
+#fishButton {
+    font-size: clamp(1rem, 2.5vw, 1.6rem);
+    padding: 1rem 2rem;
+    margin: 2vh 0;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    border: none;
+}
+
+/* Shop buttons expand naturally */
+#shop button {
+    display: block;
+    margin: 1rem auto;
+    padding: 0.75rem 1rem;
+    width: min(80%, 22rem); /* max width but adapts */
+    font-size: clamp(0.9rem, 2vw, 1.2rem);
+    cursor: pointer;
+    border-radius: 0.5rem;
+    border: none;
+}
+
+/* Minigame box grows gracefully */
+#minigame {
+    margin-top: 3vh;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 1rem;
+    display: none;
+    width: min(90%, 30rem);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#sequence {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    letter-spacing: 0.5rem;
+    margin: 1rem 0;
+}
+
+/* Improve tapability on mobile */
+button {
+    touch-action: manipulation;
+}
+
+@media (max-width: 600px) {
+    /* Slight tweaks for phones */
+    body {
+        padding: 3vh 4vw;
+    }
+
+    #sequence {
+        letter-spacing: 0.25rem;
+    }
+
+    #shop button {
+        width: 100%;
+    }
+}
