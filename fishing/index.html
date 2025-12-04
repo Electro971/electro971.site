@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Idle Fishing</title>
+    <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body>
+    <h1>Idle Fishing</h1>
+    <div id="stats">
+        <p>Fish: <span id="fishCount">0</span></p>
+        <p>Fish per second: <span id="fps">0</span></p>
+        <p>Fish per click: <span id="fpc">1</span></p>
+    </div>
+
+    <button id="fishButton">🎣 Cast Your Line</button>
+
+    <div id="shop">
+        <h2>Shop</h2>
+
+        <button id="buyAuto">
+            Buy Auto-Fisher (<span id="autoPrice">10</span> fish)
+        </button>
+
+        <button id="buyRod">
+            Buy Better Rod (<span id="rodPrice">15</span> fish)
+        </button>
+    </div>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>
