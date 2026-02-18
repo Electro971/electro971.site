@@ -2,14 +2,14 @@ body {
 	font-family: 'Roboto', Arial, sans-serif;
 	margin: 0;
 	padding: 0;
-	background: #522D80;
-	color: #522D80;
+	background: #8ecae6;
+	color: #ffffff;
 }
 
 .container {
 	max-width: 800px;
 	margin: 0px auto;
-	background: #FFFFFF;
+	background: #023047;
 	box-shadow: 0 4px 16px rgba(82,45,128,0.10);
 	padding: 40px 32px;
 	border-radius: 12px;
@@ -31,11 +31,11 @@ img {
 	height: auto;
 	margin: 2rem;
 	border-radius: 5px;
-	border: 5px solid #522D80
+	border: 5px solid #fb8500
 }
 
 header {
-	border-bottom: 2px solid #F56600;
+	border-bottom: 2px solid #fb8500;
 	padding-bottom: 18px;
 	margin-bottom: 32px;
 	text-align: center;
@@ -46,18 +46,18 @@ h1 {
 	font-weight: 700;
 	margin-bottom: 8px;
 	letter-spacing: 1px;
-	color: #522D80;
+	color: #ffffff;
 }
 
 .contact-info {
 	font-size: 1.05rem;
-	color: #522D80;
+	color: #fff;
 	margin-bottom: 0;
 }
 
 h2 {
 	font-size: 1.35rem;
-	color: #F56600;
+	color: #fb8500;
 	margin-bottom: 12px;
 	font-weight: 700;
 	letter-spacing: 0.5px;
@@ -75,11 +75,19 @@ ul {
 li {
 	margin-bottom: 14px;
 	line-height: 1.6;
-	color: #522D80;
+	color: #fff;
+}
+
+a {
+	color: #8ecae6;
+}
+
+a:hover {
+	color: #fb8500;
 }
 
 .orange-text {
-	color: #F56600;
+	color: #fb8500;
 	font-weight: 600;
 }
 
