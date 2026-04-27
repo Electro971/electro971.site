@@ -9,4 +9,4 @@ Passion project, I make nothing from this!
 Please leave constructive feedback.
 
 Blaviken Bloohouds -
-The official website of the Blaviken Bloodhounds, a Blood Bowl team.
+The official website of the Blaviken Bloodhounds, a Blood Bowl team. 
